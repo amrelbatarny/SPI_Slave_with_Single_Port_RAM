@@ -1,0 +1,4 @@
+SPI_spr_ram_tb.v
+../RTL/SPI_Slave.v
+../RTL/RAM.v
+../RTL/SPI_spr_ram.v

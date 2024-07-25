@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/VLSI/FPGA Design for Embedded Systems Specialization/Hardware Description Languages for FPGA Design/Assignments/Week3/AAC2M3H1
+T_opt
+!s110 1721922551
+V^EhEfCc_];=47=I6XS59K3
+04 14 4 work SPI_spr_ram_tb fast 0
+=1-6479f04cc8ef-66a273f7-95-1c64
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+R0
+vRAM
+Z2 !s110 1721922649
+!i10b 1
+!s100 CN>XWN[gN7;ZIT^3:mlTh2
+Ig;A<gmeo]gK^1b7=R[<RK0
+Z3 dC:/VLSI/Projects/SPI_Slave_with_Single_Port_RAM/Verification
+w1709586809
+8../RTL/RAM.v
+F../RTL/RAM.v
+!i122 2
+L0 1 63
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z6 !s108 1721922649.000000
+!s107 ../RTL/SPI_spr_ram.v|../RTL/RAM.v|../RTL/SPI_Slave.v|SPI_spr_ram_tb.v|
+Z7 !s90 -reportprogress|300|-f|src_files.list|-mfcu|
+!i113 0
+Z8 o-mfcu -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@r@a@m
+vSPI_Slave
+R2
+!i10b 1
+!s100 EU0YVPKHIXDaAJjWeIXoL0
+I^@likN4az=iI665Sh7[8U1
+R3
+w1709593402
+8../RTL/SPI_Slave.v
+F../RTL/SPI_Slave.v
+!i122 2
+L0 1 168
+R4
+R5
+r1
+!s85 0
+31
+R6
+Z9 !s107 ../RTL/SPI_spr_ram.v|../RTL/RAM.v|../RTL/SPI_Slave.v|SPI_spr_ram_tb.v|
+R7
+!i113 0
+R8
+R1
+n@s@p@i_@slave
+vSPI_spr_ram
+R2
+!i10b 1
+!s100 G5S0OIN]Sj8AEoVNS9YJ=3
+ICC7eKZgF6H7[cbiM;F5gZ3
+R3
+w1709479284
+8../RTL/SPI_spr_ram.v
+F../RTL/SPI_spr_ram.v
+!i122 2
+L0 1 24
+R4
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 0
+R8
+R1
+n@s@p@i_spr_ram
+vSPI_spr_ram_tb
+R2
+!i10b 1
+!s100 anjlX=:To0<LKPG3CT`562
+Io3<m`NWRj^`5;VLbgUA`k3
+R3
+w1709487932
+8SPI_spr_ram_tb.v
+FSPI_spr_ram_tb.v
+!i122 2
+L0 1 149
+R4
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 0
+R8
+R1
+n@s@p@i_spr_ram_tb
