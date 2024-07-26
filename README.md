@@ -14,7 +14,25 @@ This project implements an SPI (Serial Peripheral Interface) slave device with i
 - **Single-Port RAM**: Provides simple and efficient data storage.
 - **Verilog Implementation**: Suitable for FPGA synthesis and simulation.
 - **Testbenches**: Included for functional verification.
+  
+## SPI State Diagram
 
+The state diagram for the SPI slave device is illustrated as follows:
+
+![SPI State Diagram](Documentation/SPI_State_Diagram.png)
+
+### State Descriptions
+
+- **IDLE**: The initial state where the SPI slave waits for communication. The state machine returns to IDLE on reset or when SS_n (Slave Select) is high.
+  
+- **CHK_CMD (Check Command)**: When SS_n is low, the SPI slave checks the command bit (MOSI). If MOSI is high, it transitions to READ_ADDR; if low, it transitions to WRITE.
+
+- **WRITE**: In this state, the SPI slave writes the received address/data to RAM. The state persists as long as SS_n is low and transitions to IDLE when SS_n is high.
+
+- **READ_ADDR**: When SS_n is low and MOSI is high, the SPI slave transitions to READ_ADDR to receive the address for reading from RAM.
+
+- **READ_DATA**: In this state, the SPI slave sends the requested data from RAM to the master. The state persists as long as SS_n is low and transitions to IDLE when SS_n is high.
+  
 ## Directory Structure
 
 ```
@@ -37,6 +55,26 @@ SPI_Slave_with_Single_Port_RAM/
 │   └── Project_snippets.pdf
 └── README.md           # This README file
 ```
+
+## Signal Description
+
+The following table describes the signals used in the design:
+
+| Signal   | Direction | Width | Description                                    |
+|----------|------------|-------|------------------------------------------------|
+| MOSI     | Input      | 1     | Master Out Slave In                            |
+| MISO     | Output     | 1     | Master In Slave Out                            |
+| SS_n     | Input      | 1     | Slave Select (active low)                      |
+| clk      | Input      | 1     | Clock signal                                   |
+| rst_n    | Input      | 1     | Reset signal (active low)                      |
+| rx_data  | Output     | 10    | Data received from SPI master                  |
+| rx_valid | Output     | 1     | Indicates valid data received from SPI master  |
+| tx_data  | Input      | 8     | Data to be transmitted to SPI master           |
+| tx_valid | Input      | 1     | Indicates valid data to transmit to SPI master |
+| din      | Output     | 10    | Data input to RAM                              |
+| dout     | Input      | 8     | Data output from RAM                           |
+| rx_valid | Output     | 1     | Data valid signal from SPI to RAM              |
+| tx_valid | Input      | 1     | Data valid signal from RAM to SPI              |
 
 ## Getting Started
 
